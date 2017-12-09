@@ -1,24 +1,4 @@
-class All
-	# https://www.codewars.com/kata/5626b561280a42ecc50000d1/train/ruby
-	def sum_dig_pow(a, b)
-		list = []
-		(a..b).each do |n|
-			temp = 0
-			n.to_s.chars.each_with_index do |c, index|
-				temp += c.to_i ** (index + 1)
-			end
-
-			list << n if n == temp
-
-		end
-
-	  return list
-	end
-
-	# 
-	# ================
-	# 
-
+class Exercise2
 	# https://www.codewars.com/kata/559536379512a64472000053/train/ruby
 	def play_pass(str, n)
 		str.upcase!
@@ -65,5 +45,4 @@ class All
 
 end
 
-
-p All.new.play_pass('BORN IN 2015!', 1)
+p Exercise2.new.play_pass('BORN IN 2015!', 1)
