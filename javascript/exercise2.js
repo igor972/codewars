@@ -1,3 +1,4 @@
+// https://www.codewars.com/kata/build-a-pile-of-cubes/train/javascript
 function findNb(m) {
   let count = 1;
   while(m > 1) {
