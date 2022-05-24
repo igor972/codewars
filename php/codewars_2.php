@@ -8,11 +8,10 @@ var_dump(spinWords($str));
 
 function spinWords(string $str): string {
 	$str_splited = explode(' ', $str);
-	$array_base = $str_splited;
-	for($i = 0; $i < count($str_splited); $i++) {
-		if(strlen($str_splited[$i]) >= 5) {
-			$array_base[$i] = strrev($str_splited[$i]);
+	foreach($str_splited as &$word) {
+		if(strlen($word) >= 5) {
+			$word = strrev($word);
 		}
 	}
-	return implode(' ', $array_base);
+	return implode(' ', $str_splited);
 }
