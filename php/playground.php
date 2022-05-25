@@ -1,11 +1,12 @@
 <?php
 
-$arr = [1, 2, 3, 4, 5];
+$arr = ['1.5.7', 'a', 'b', 'c', 'd'];
 
-for($i=0; $i < count($arr); $i++) {
-	if($arr[$i] >= 3) {
-		$arr[$i] = 'foo';
-	}	
+
+foreach($arr as $l) {
+	if(strpos($l, '1.5') !== false) {
+		echo $l;
+	}
 }
 
-var_dump($arr);
+//var_dump($arr);
